@@ -1,0 +1,29 @@
+<!-- login_get.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Details</title>
+</head>
+<body>
+    <h2>Login Details</h2>
+    <p>Username: <span id="username"></span></p>
+    <p>Password: <span id="password"></span></p>
+
+    <script>
+        // Récupérer les paramètres de requête GET de l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Récupérer la valeur du paramètre 'username' de la requête GET
+        const username = urlParams.get('username');
+
+        // Récupérer la valeur du paramètre 'password' de la requête GET
+        const password = urlParams.get('password');
+
+        // Afficher les valeurs récupérées dans les éléments HTML appropriés
+        document.getElementById('username').innerText = username;
+        document.getElementById('password').innerText = password;
+    </script>
+</body>
+</html>
